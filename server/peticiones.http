@@ -1,0 +1,75 @@
+### register a new user 
+POST http://localhost:3500/auth/register
+Content-Type: application/json
+
+{"name": "user11", "email": "user12@gmail.com", "password": "clave"}
+
+
+### login 
+POST http://localhost:3500/auth/login
+Content-Type: application/json
+
+{"email": "pedro@correo.com", "password": "111"}
+
+
+### Verify 
+GET http://localhost:3500/auth/is-verify
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGVkcm9AY29ycmVvLmNvbSIsImlhdCI6MTYxMjkwNjY3NiwiZXhwIjoxNjEyOTEwMjc2fQ.eotRR1UMnR6je97IGhM9MWEs4ESpxl_pokz3_q5KGWQ
+Content-Type: application/json
+
+
+#=============================================================
+
+### Homepage
+GET http://localhost:3500/dashboard
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGVkcm9AY29ycmVvLmNvbSIsImlhdCI6MTYxMjkwNjY3NiwiZXhwIjoxNjEyOTEwMjc2fQ.eotRR1UMnR6je97IGhM9MWEs4ESpxl_pokz3_q5KGWQ
+Content-Type: application/json
+
+
+
+#=============================================================
+
+### invoices
+POST http://localhost:3500/invoices
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicGVkcm9AY29ycmVvLmNvbSIsImlhdCI6MTYxMjk3NjU2NywiZXhwIjoxNjEyOTgwMTY3fQ.sRhGyrnTI7XF_U9nDW5N6gmn5Uzwfe1Wp0FFt9IV084
+Content-Type: application/json
+
+{"user_id": 1}
+
+
+
+
+#================================================================
+### usuarios
+POST http://localhost:4500/create
+Content-Type: application/json
+
+
+### usuarios
+POST http://localhost:4500/login
+Content-Type: application/json
+
+    {
+        "email": "billy@example.com",
+        "password": "passaword1"
+    }
+
+### recibos
+POST http://localhost:4500/api/v1/recibos/
+Content-Type: application/json
+
+    {
+        "user_id": 1,
+        "email": "billy@example.com",
+        "password": "passaword1"
+    }
+
+### cobros
+POST http://localhost:4500/api/v1/recibos/stripe/
+Content-Type: application/json
+
+    {
+        "user_id": 1,
+        "email": "billy@example.com",
+        "password": "passaword1"
+    }
